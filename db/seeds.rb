@@ -10,6 +10,7 @@ require 'faker'
 Test.destroy_all
 Store.destroy_all
 Job.destroy_all
+Article.destroy_all
 
 dollar = Store.create(name: 'Dollar Store', location: Faker::Address.full_address, rating: Faker::Number.between(from: 0, to: 5))
 appliance = Store.create(name: 'Odds and Ends', location: Faker::Address.full_address, rating: Faker::Number.between(from: 0, to: 5))
@@ -65,7 +66,11 @@ end
 10.times do
   Job.create(title: Faker::Job.title , company: Faker::Company.name, salary: Faker::Number.between(from: 15.00, to: 100.00))
 end
-
+10.times do
+  Article.create(title: Faker::Educator.subject , author: Faker::Name.name, body: Faker::Hipster.paragraph )
+end
+ 
 puts "seeded Store#{Store.all.size}"
 puts "seeded Item#{Item.all.size}"
 puts "seeded Job#{Job.all.size}"
+puts "seeded Article#{Article.all.size}"
