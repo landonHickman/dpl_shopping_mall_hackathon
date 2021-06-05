@@ -5,9 +5,9 @@ const StoreSingular = (props) => {
 
   return(
     <div>
-      <h1>{name}</h1>
-      <h2>{location}</h2>
-      <h2>Rating: {rating}</h2>
+      <h2>{name}</h2>
+      <h3>{location}</h3>
+      <h3>Rating: {rating}</h3>
     </div>
   )
 }

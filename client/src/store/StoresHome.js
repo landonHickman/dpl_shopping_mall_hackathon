@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import StoreSingular from './StoreSingular'
+import StoreForm from './StoreForm'
 
 const StoresHome = () => {
   const [stores, setStores] = useState([])
+  const [showForm, setShowForm] = useState(false)
 
   useEffect(()=>{
     getStores()
@@ -18,7 +20,10 @@ const StoresHome = () => {
       console.log(err)
     }
   }
-  
+
+  const addStore = (store) => {
+    setStores([store, ...stores])
+  } 
 
   const renderStores = () => {
     return stores.map( store => {
@@ -30,7 +35,8 @@ const StoresHome = () => {
 
   return(
     <div style={{textAlign: 'center'}}>
-      <h1>stores</h1>
+      <button onClick={()=>setShowForm(!showForm)}>Add Store</button>
+      {showForm && <StoreForm addStore={addStore}/>}
       {renderStores()}
     </div>
   )
