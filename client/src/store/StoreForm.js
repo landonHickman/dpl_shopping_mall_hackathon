@@ -12,11 +12,9 @@ const StoreForm = (props) => {
     try{
       if(id){
         let res = await axios.put(`/api/stores/${id}`,{name, location, rating})
-        console.log(res.data)
         editStore(res.data)
       }else {
         let res = await axios.post('/api/stores',{name, location, rating})
-        console.log(res.data)
         addStore(res.data)
       }
     }catch(err) {

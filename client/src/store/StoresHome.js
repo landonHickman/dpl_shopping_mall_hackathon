@@ -29,10 +29,15 @@ const StoresHome = () => {
     setStores( stores.map (s => s.id === store.id ? store : s))
   }
 
+  const deleteStore = async (id) => {
+    let res = await axios.delete(`/api/stores/${id}`)
+    setStores( stores.filter (store => store.id !== res.data.id))
+  }
+
   const renderStores = () => {
     return stores.map( store => {
       return (
-        <StoreSingular key={store.id} {...store} editStore={editStore}/>
+        <StoreSingular key={store.id} {...store} editStore={editStore} deleteStore={deleteStore}/>
       )
     })
   }
