@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import JobForm from './JobForm'
 
 const Job = (props) => {
-  
- 
   const {id, title, company, salary, deleteJob } = props
   const [showForm, setShowForm] = useState(false)
   

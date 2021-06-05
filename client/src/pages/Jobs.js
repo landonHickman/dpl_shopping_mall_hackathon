@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
-import JobSingular from '/JobSingular'
-import JobForm from '/JobForm'
+import JobForm from './JobForm'
+import JobSingular from './JobSingular'
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([])
   const [showForm, setShowForm] = useState(false)
 
   useEffect(()=>{
+    console.log("effect mounted")
     getJobs()
   },[])
 

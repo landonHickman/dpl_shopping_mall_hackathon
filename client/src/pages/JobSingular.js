@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Jobs from '/Jobs'
 import JobForm from './JobForm'
 
 const JobSingular = (props) => {
@@ -16,7 +15,6 @@ const JobSingular = (props) => {
         <button onClick={()=>deleteJob(id)}>Delete</button>
         {showForm && <JobForm {...props} editJob={editJob} setShowForm={setShowForm}/>}
         <button onClick={()=>setShowJob(!showJob)}>View Jobs</button>
-        {showJob && <Jobs job_id={id}/>}
       </div>
     )
 }

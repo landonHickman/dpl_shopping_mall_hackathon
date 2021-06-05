@@ -3,7 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Jobs from './pages/Job'
+import Jobs from './pages/Jobs';
 
 
 function App() {
