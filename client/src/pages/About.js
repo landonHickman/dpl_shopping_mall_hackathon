@@ -22,13 +22,14 @@ const About = ()=> {
 
 const styles = {
     header: {
-      border: '2px solid Black',
       textAlign: 'center',
       padding: '60px',
       backgroundColor: 'rgb(215, 255, 248)',
     },
     p: {
-        border: '2px solid Black',
+        border: '2px solid black',
+        margin: 'auto',
+        maxWidth: '300px',
         textAlign: 'center',
         padding: '60px',
         backgroundColor: 'lightgray'
