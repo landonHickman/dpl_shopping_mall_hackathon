@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React, {useState} from 'react'
 import Items from '../item/Items'
 import StoreForm from './StoreForm'
