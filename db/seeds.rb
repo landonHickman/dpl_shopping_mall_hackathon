@@ -28,44 +28,45 @@ blockbuster = Store.create(name: 'Blockbuster', location: Faker::Address.full_ad
 end
 
 10.times do
-  appliance.items.create(name: Faker::Appliance.equipment, desc: Faker::Lorem.sentence, price: rand(500.00..4000.00))
+  appliance.items.create(name: Faker::Appliance.equipment, desc: Faker::Lorem.sentence, price: rand(500..4000))
 end
 
 10.times do
-  lightning.items.create(name: Faker::Vehicle.make_and_model , desc: Faker::Lorem.sentence, price: rand(4000.00..100000.00))
+  lightning.items.create(name: Faker::Vehicle.make_and_model , desc: Faker::Lorem.sentence, price: rand(4000..100000))
 end
 
 10.times do
-  homedepot.items.create(name: Faker::Construction.material, desc: Faker::Lorem.sentence, price: rand(10.00..200.00))
+  homedepot.items.create(name: Faker::Construction.material, desc: Faker::Lorem.sentence, price: rand(10..200))
 end
 
 10.times do
-  smiths.items.create(name: Faker::Food.ingredient, desc: Faker::Food.description, price: rand(3.00..100.00))
+  smiths.items.create(name: Faker::Food.ingredient, desc: Faker::Food.description, price: rand(3..100))
 end
 
 10.times do
-  petstore.items.create(name: Faker::Creature::Dog.breed, desc: Faker::Creature::Dog.sound, price: rand(100.00..2000.00))
+  petstore.items.create(name: Faker::Creature::Dog.breed, desc: Faker::Creature::Dog.sound, price: rand(100..2000))
 end
 
 10.times do
-  bookstore.items.create(name: Faker::Book.title, desc: Faker::Lorem.sentence, price: rand(10.00..100.00))
+  bookstore.items.create(name: Faker::Book.title, desc: Faker::Lorem.sentence, price: rand(10..100))
 end
 
 10.times do
-  teavana.items.create(name: Faker::Tea.variety, desc: Faker::Lorem.sentence, price: rand(10.00..50.00))
+  teavana.items.create(name: Faker::Tea.variety, desc: Faker::Lorem.sentence, price: rand(10..50))
 end
 
 10.times do
-  gamestop.items.create(name: Faker::Game.title, desc: Faker::Hipster.sentence, price: rand(15.00..60.00))
+  gamestop.items.create(name: Faker::Game.title, desc: Faker::Hipster.sentence, price: rand(15..60))
 end
 
 10.times do
-  blockbuster.items.create(name: Faker::Movie.title, desc: Faker::Movie.quote, price: rand(2.00..10.00))
+  blockbuster.items.create(name: Faker::Movie.title, desc: Faker::Movie.quote, price: rand(2..10))
 end
 
 10.times do
-  Job.create(title: Faker::Job.title , company: Faker::Company.name, salary: Faker::Number.between(from: 15.00, to: 100.00))
+  Job.create(title: Faker::Job.title , company: Faker::Company.name, salary: Faker::Number.between(from: 15, to: 100))
 end
+
 10.times do
   Article.create(title: Faker::Educator.subject , author: Faker::Name.name, body: Faker::Hipster.paragraph )
 end
