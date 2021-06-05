@@ -1,21 +1,19 @@
-import './App.css';
 import {Route, Switch} from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Jobs from './pages/Job'
 
-function App() {
+
+function Job() {
   return (
     <>
     <NavBar />
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
-      <Route exact path='/api/jobs' component={Jobs} />
     </Switch>
     </>
   );
 }
 
-export default App;
+export default Job;
