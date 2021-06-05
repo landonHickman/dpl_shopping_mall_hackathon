@@ -45,6 +45,7 @@ const StoresHome = () => {
   return(
     <div>
       <button onClick={()=>setShowForm(!showForm)}>Add Store</button>
+      <p></p>
       {showForm && <StoreForm addStore={addStore} setShowForm={setShowForm}/>}
       {renderStores()}
     </div>

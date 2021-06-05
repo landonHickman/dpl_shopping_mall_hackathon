@@ -12,7 +12,7 @@ const StoreSingular = (props) => {
   return(
     <div style={styles.brd}>
       <div style={styles.header}>
-        <h2>{name}</h2>
+        <h2 style={styles.title}>{name}</h2>
         <h3>{location}</h3>
         <h3>Rating: {rating}</h3>
         <button onClick={()=>setShowForm(!showForm)}>Edit Store</button>
@@ -29,6 +29,18 @@ const StoreSingular = (props) => {
 }
 
 const styles = {
+  title: {
+    border: '2px solid black',
+    borderRadius: '25px',
+    maxWidth: '500px',
+    width: 'auto',
+    margin: 'auto',
+    textAlign: 'center',
+    marginBottom: '10px',
+    marginTop: '25px',
+    backgroundColor: 'rgba(194,224,234, 100)',
+    padding: '20px'
+  },
   header: {
     border: '2px solid black',
     borderRadius: '25px',
@@ -37,7 +49,7 @@ const styles = {
     margin: 'auto',
     textAlign: 'center',
     marginBottom: '10px',
-    marginTop: '10px',
+    marginTop: '25px',
     backgroundColor: 'lightgrey'
   },
   brd: {
@@ -48,8 +60,8 @@ const styles = {
     margin: 'auto',
     textAlign: 'center',
     marginBottom: '10px',
-    marginTop: '10px',
-    backgroundColor: 'rgba(194,224,234, 100'
+    marginTop: 'px',
+    backgroundColor: 'rgba(194,224,234, 100)'
   }
 }
 

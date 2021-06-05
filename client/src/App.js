@@ -8,7 +8,7 @@ import Jobs from './pages/Jobs';
 
 function App() {
   return (
-    <>
+    <div style={styles.background}>
     <NavBar />
     <Switch>
       <Route exact path='/' component={Home} />
@@ -16,8 +16,14 @@ function App() {
       <Route exact path='/jobs' component={Jobs} />
       
     </Switch>
-    </>
+    </div>
   );
+}
+
+const styles = {
+  background: {
+    backgroundColor: 'rgb(215, 255, 248)',
+  },
 }
 
 export default App;

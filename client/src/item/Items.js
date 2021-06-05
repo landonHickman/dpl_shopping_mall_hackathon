@@ -48,6 +48,7 @@ const Items = (props) => {
     <div style={{textAlign: 'center'}}>
       <h3></h3>
       <button onClick={()=>setShowForm(!showForm)}>Add Item</button>
+      <p></p>
       {showForm && <ItemForm addItem={addItem} setShowForm={setShowForm} store_id={store_id}/>}
       {renderItems()}
     </div>

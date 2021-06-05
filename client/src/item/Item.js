@@ -12,6 +12,7 @@ const Item = (props) => {
       <h4>${price}</h4>
       <button onClick={()=>setShowForm(!showForm)}>Edit Item</button>
       <button onClick={()=>deleteItem(id)}>Delete</button>
+      <p></p>
       {showForm && <ItemForm {...props} setShowForm={setShowForm}/>}
       <p></p>
     </div>
@@ -19,9 +20,16 @@ const Item = (props) => {
 }
 
 const styles = {
-  container: {
-    padding:'20px',
-    textAlign: 'center'
+  header: {
+    border: '2px solid black',
+    borderRadius: '25px',
+    maxWidth: '700px',
+    width: 'auto',
+    margin: 'auto',
+    textAlign: 'center',
+    marginBottom: '10px',
+    marginTop: '10px',
+    backgroundColor: 'lightgrey'
   },
   brd: {
     border: '2px solid black',
@@ -32,6 +40,7 @@ const styles = {
     textAlign: 'center',
     marginBottom: '10px',
     marginTop: '10px',
+    backgroundColor: 'lightgrey'
   }
 }
 
