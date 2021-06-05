@@ -43,12 +43,14 @@ const StoresHome = () => {
   }
 
   return(
-    <div style={{textAlign: 'center'}}>
+    <div>
       <button onClick={()=>setShowForm(!showForm)}>Add Store</button>
       {showForm && <StoreForm addStore={addStore} setShowForm={setShowForm}/>}
       {renderStores()}
     </div>
   )
 }
+
+
 
 export default StoresHome

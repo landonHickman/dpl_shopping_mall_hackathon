@@ -26,7 +26,8 @@ const ItemForm = (props) => {
   }
 
   return (
-    <div>
+    <div style={styles.container}>
+    <div style={styles.brd}>
       <form onSubmit={handleSubmit}>
         <h3>{id ? 'Edit Form' : 'Add Form' }</h3>
         <p>Name</p>
@@ -39,6 +40,22 @@ const ItemForm = (props) => {
         <button>{id ? 'Edit' : 'Add'}</button>
       </form>
     </div>
+    </div>
   )
+}
+
+const styles = {
+  container: {
+    padding:'20px',
+    textAlign: 'center'
+  },
+  brd: {
+    border: '2px solid black',
+    borderRadius: '25px',
+    maxWidth: '300px',
+    width: 'auto',
+    margin: 'auto',
+    textAlign: 'center',
+  }
 }
 export default ItemForm
