@@ -25,10 +25,14 @@ const StoresHome = () => {
     setStores([store, ...stores])
   } 
 
+  const editStore = (store) => {
+    setStores( stores.map (s => s.id === store.id ? store : s))
+  }
+
   const renderStores = () => {
     return stores.map( store => {
       return (
-        <StoreSingular key={store.id} {...store}/>
+        <StoreSingular key={store.id} {...store} editStore={editStore}/>
       )
     })
   }
@@ -36,7 +40,7 @@ const StoresHome = () => {
   return(
     <div style={{textAlign: 'center'}}>
       <button onClick={()=>setShowForm(!showForm)}>Add Store</button>
-      {showForm && <StoreForm addStore={addStore}/>}
+      {showForm && <StoreForm addStore={addStore} setShowForm={setShowForm}/>}
       {renderStores()}
     </div>
   )
