@@ -14,7 +14,6 @@ const JobSingular = (props) => {
         <button onClick={()=>setShowForm(!showForm)}>Edit Job</button>
         <button onClick={()=>deleteJob(id)}>Delete</button>
         {showForm && <JobForm {...props} editJob={editJob} setShowForm={setShowForm}/>}
-        <button onClick={()=>setShowJob(!showJob)}>View Jobs</button>
       </div>
     )
 }
