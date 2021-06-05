@@ -1,19 +1,22 @@
-import {Route, Switch} from 'react-router-dom';
-import NavBar from './components/NavBar';
-import Home from './pages/Home';
-import About from './pages/About';
+import React from 'react'
+import JobForm from './JobForm'
 
 
-function Job() {
+const Job = (props) => {
+  
+ 
+  const {id, title, company, salary, deleteJob } = props
+  
   return (
     <>
-    <NavBar />
-    <Switch>
-      <Route exact path='/' component={Home} />
-      <Route exact path='/about' component={About} />
-    </Switch>
+      <h1>{company}</h1>
+      <p>Job Title: {title} salary:{salary}</p>
+      <p onClick={()=> deleteJob(id)}>delete</p>
+      <JobForm {...props}/>
+      <hr />
+  
     </>
-  );
+  )
 }
 
-export default Job;
+export default Job
