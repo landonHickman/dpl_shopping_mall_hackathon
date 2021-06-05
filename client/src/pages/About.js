@@ -34,7 +34,7 @@ const styles = {
         backgroundColor: 'lightgray'
     },
     p2: {
-      minHeight: '50px',
+      minHeight: '100px',
       position: 'relative',
       padding: '10px',
       textAlign: 'center',
