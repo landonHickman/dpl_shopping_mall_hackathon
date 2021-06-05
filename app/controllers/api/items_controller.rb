@@ -11,6 +11,6 @@ class Api::ItemsController < ApplicationController
   def update
   end
 
-  def dstroy
+  def destroy
   end
 end
