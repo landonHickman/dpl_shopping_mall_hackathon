@@ -4,8 +4,6 @@ import JobForm from './JobForm'
 const JobSingular = (props) => {
   const {id, title, company, salary, editJob, deleteJob} = props
   const [showForm, setShowForm] = useState(false)
-  const [showJob, setShowJob] = useState(false)
-
     return(
       <div>
         <h2>{company}</h2>

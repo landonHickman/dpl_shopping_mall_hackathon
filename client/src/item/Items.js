@@ -11,7 +11,7 @@ const Items = (props) => {
 
   useEffect(()=>{
     getItems()
-  },[])
+  })
 
   const getItems = async () => {
     try{
@@ -46,7 +46,7 @@ const Items = (props) => {
 
   return(
     <div style={{textAlign: 'center'}}>
-      <h3></h3>
+      <p></p>
       <button onClick={()=>setShowForm(!showForm)}>Add Item</button>
       {showForm && <ItemForm addItem={addItem} setShowForm={setShowForm} store_id={store_id}/>}
       {renderItems()}
