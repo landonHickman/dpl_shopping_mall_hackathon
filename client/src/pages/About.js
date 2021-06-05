@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { Link } from 'react-router-dom'
+
 
 const About = ()=> {
     useEffect(()=>{
@@ -43,9 +43,13 @@ const styles = {
       textAlign: 'center',
       display: 'flex',
       justifyContent: 'center',
+      
+      
     },
     a1: {
-      marginRight: '5px',
+      textDecoration: 'none',
+      margin: '5px',
+      fontSize: '1.25em'
       
     },
     container: {

@@ -60,8 +60,10 @@ const styles = {
     margin: 'auto',
     textAlign: 'center',
     marginBottom: '10px',
-    marginTop: 'px',
-    backgroundColor: 'rgba(194,224,234, 100)'
+    marginTop: '10px',
+    backgroundColor: 'rgba(194,224,234, 100)',
+    boxShadow: '2px 2px rgba(1, 1, 1, .5)'
+
   }
 }
 

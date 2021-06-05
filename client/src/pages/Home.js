@@ -22,7 +22,7 @@ const styles = {
     maxWidth: '800px',
     backgroundColor: 'lightgrey',
     fontSize: '50px',
-    boxShadow: '1.5px 1.5px rgba(1, 1, 1, .5)'
+    boxShadow: '2px 2px rgba(1, 1, 1, .5)'
     
   },
   
