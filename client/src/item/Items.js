@@ -39,7 +39,7 @@ const Items = (props) => {
   const renderItems = () => {
     return items.map( item => {
       return (
-        <Item key={item.id} {...item} editItem={editItem} deleteItem={deleteItem}/>
+        <Item key={item.id} {...item} store_id={store_id} editItem={editItem} deleteItem={deleteItem}/>
       )
     })
   }

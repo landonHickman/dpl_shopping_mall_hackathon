@@ -14,7 +14,7 @@ const StoreSingular = (props) => {
       <h2>{name}</h2>
       <h3>{location}</h3>
       <h3>Rating: {rating}</h3>
-      <button onClick={()=>setShowForm(!showForm)}>Edit Form</button>
+      <button onClick={()=>setShowForm(!showForm)}>Edit Store</button>
       <button onClick={()=>deleteStore(id)}>Delete</button>
       {showForm && <StoreForm {...props} editStore={editStore} setShowForm={setShowForm}/>}
       <button onClick={()=>setShowItem(!showItem)}>View Items</button>
