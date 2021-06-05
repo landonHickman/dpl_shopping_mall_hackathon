@@ -56,6 +56,7 @@ const Jobs = () => {
 const styles= {
   header: {
     border: '2px solid Black',
+    borderRadius: '25px',
     textAlign: 'center',
     padding: '60px',
     backgroundColor: 'lightyellow',
