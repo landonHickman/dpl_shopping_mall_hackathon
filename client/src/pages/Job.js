@@ -7,9 +7,9 @@ const Job = (props) => {
   
   return (
     <div>
-    <h3>{title}</h3>
-    <h4>{company}</h4>
-    <h4>{salary}</h4>
+    <h3>title: {title}</h3>
+    <h4>company: {company}</h4>
+    <h4>salary: ${salary} hourly</h4>
     <button onClick={()=>setShowForm(!showForm)}>New Job</button>
     <button onClick={()=>deleteJob(id)}>Delete</button>
     {showForm && <JobForm {...props} setShowForm={setShowForm}/>}
