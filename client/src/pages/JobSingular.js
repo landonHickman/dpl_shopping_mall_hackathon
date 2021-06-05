@@ -6,9 +6,9 @@ const JobSingular = (props) => {
   const [showForm, setShowForm] = useState(false)
     return(
       <div>
-        <h2>{company}</h2>
-        <h3>{title}</h3>
-        <h3>{salary}</h3>
+        <h2>Company: {company}</h2>
+        <h3>Job Title: {title}</h3>
+        <h3>Salary: ${salary}</h3>
         <button onClick={()=>setShowForm(!showForm)}>Edit Job</button>
         <button onClick={()=>deleteJob(id)}>Delete</button>
         {showForm && <JobForm {...props} editJob={editJob} setShowForm={setShowForm}/>}

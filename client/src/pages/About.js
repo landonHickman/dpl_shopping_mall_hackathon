@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react'
-import { Link } from 'react-router-dom'
 
 const About = ()=> {
     useEffect(()=>{
@@ -22,6 +21,7 @@ const About = ()=> {
 
 const styles = {
     header: {
+      border: '2px solid black',
       textAlign: 'center',
       padding: '60px',
       backgroundColor: 'rgb(215, 255, 248)',
