@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Jobs from './pages/Job'
 
+
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
       <Route exact path='/jobs' component={Jobs} />
+      
     </Switch>
     </>
   );
