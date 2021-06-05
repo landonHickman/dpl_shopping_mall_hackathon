@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
 
-
 const About = ()=> {
     useEffect(()=>{
         console.log("About component Mounted")
@@ -22,9 +21,17 @@ const About = ()=> {
 
 const styles = {
     header: {
+      border: '2px solid black',
+      borderRadius: '25px',
+      margin: 'auto',
+      width: 'auto',
+      marginBottom: '25px',
+      maxWidth: '800px',
       textAlign: 'center',
+      fontSize: '50px',
       padding: '60px',
-      backgroundColor: 'rgb(215, 255, 248)',
+      backgroundColor: 'lightyellow',
+      boxShadow: '2px 2px rgba(1, 1, 1, .5)',
     },
     p: {
         border: '2px solid black',

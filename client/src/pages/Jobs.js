@@ -58,13 +58,17 @@ const styles= {
     border: '2px solid Black',
     borderRadius: '25px',
     textAlign: 'center',
+    width: 'auto',
+    margin: 'auto',
     padding: '60px',
+    maxWidth: '800px',
+    fontSize: '50px',
     backgroundColor: 'lightyellow',
+    boxShadow: '2px 2px rgba(1, 1, 1, .5)',
+    marginBottom: '10px'
   },
   jobs: {
-    border: '2px solid Black',
     textAlign: 'center',
-    padding: '60px',
     backgroundColor: 'rgb(215, 255, 248)'
   }
 }

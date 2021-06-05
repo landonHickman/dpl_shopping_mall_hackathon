@@ -20,7 +20,7 @@ const styles = {
     width: 'auto',
     margin: 'auto',
     maxWidth: '800px',
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'lightyellow',
     fontSize: '50px',
     boxShadow: '2px 2px rgba(1, 1, 1, .5)'
     
