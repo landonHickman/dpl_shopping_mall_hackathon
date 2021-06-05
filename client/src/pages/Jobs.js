@@ -44,12 +44,28 @@ const Jobs = () => {
   }
 
   return(
-    <div style={{textAlign: 'center'}}>
+    <div style={styles.jobs}>
+      <h1 style={styles.header}>Job Listings</h1>
       <button onClick={()=>setShowForm(!showForm)}>Add Job</button>
       {showForm && <JobForm addJob={addJob} setShowForm={setShowForm}/>}
       {renderJobs()}
     </div>
   )
+}
+
+const styles= {
+  header: {
+    border: '2px solid Black',
+    textAlign: 'center',
+    padding: '60px',
+    backgroundColor: 'lightyellow',
+  },
+  jobs: {
+    border: '2px solid Black',
+    textAlign: 'center',
+    padding: '60px',
+    backgroundColor: 'rgb(215, 255, 248)'
+  }
 }
 
 export default Jobs
