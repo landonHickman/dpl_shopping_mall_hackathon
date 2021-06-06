@@ -11,7 +11,7 @@ const Items = (props) => {
 
   useEffect(()=>{
     getItems()
-  })
+  },[])
 
   const getItems = async () => {
     try{
