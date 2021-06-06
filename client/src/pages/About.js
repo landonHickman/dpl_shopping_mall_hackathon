@@ -2,8 +2,8 @@ import React, {useEffect} from 'react'
 
 const About = ()=> {
     useEffect(()=>{
-        console.log("About component Mounted")
     },[])
+    
    return (
        <div style={styles.container}>
            <h1 style={styles.header}>About DPL Shopping Mall</h1>

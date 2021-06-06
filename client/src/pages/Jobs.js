@@ -8,7 +8,6 @@ const Jobs = () => {
   const [showForm, setShowForm] = useState(false)
 
   useEffect(()=>{
-    console.log("effect mounted")
     getJobs()
   },[])
 
