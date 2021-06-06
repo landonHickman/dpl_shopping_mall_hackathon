@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Jobs from './pages/Jobs';
+import Articles from './article/Articles';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
       <Route exact path='/jobs' component={Jobs} />
-      
+      <Route exact path='/articles' component={Articles} />
     </Switch>
     </div>
   );
