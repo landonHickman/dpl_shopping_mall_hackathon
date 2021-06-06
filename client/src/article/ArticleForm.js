@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, {useState} from 'react'
 
 const ArticleForm = (props) => {
-  const {id, addArticle} = props 
+  const {id, addArticle, editArticle} = props 
   const [title, setTitle] = useState(props.title ? props.title : '')
   const [author, setAuthor] = useState(props.author ? props.author : '')
   const [body, setBody] = useState(props.body ? props.body : '')
@@ -12,7 +12,8 @@ const ArticleForm = (props) => {
 
     try{
       if(id){
-
+        let res = await axios.put(`/api/articles/${id}`, {title, author, body})
+        editArticle(res.data)
       }else{
         let res = await axios.post('/api/articles', {title, author, body})
         addArticle(res.data)
@@ -21,6 +22,7 @@ const ArticleForm = (props) => {
       alert('err')
       console.log(err)
     }
+    
   }
 
   return (

@@ -17,11 +17,24 @@ const Articles = () => {
   }
 
   const renderArticles = () => {
-    return articles.map (article => <Article key={article.id} {...article}/>)
+    return articles.map (article => 
+      <Article key={article.id} 
+      {...article} 
+      deleteArticle={deleteArticle} 
+      editArticle={editArticle}/>
+    )
+  }
+  const deleteArticle = async (id) => {
+    let res = await axios.delete(`/api/articles/${id}`)
+    setArticles( articles.filter (article => article.id !== res.data.id))
   }
 
   const addArticle = (article) => {
     setArticles([article, ...articles])
+  }
+
+  const editArticle = (article) => {
+    setArticles( articles.map(art => art.id === article.id ? article : art))
   }
 
   return (
